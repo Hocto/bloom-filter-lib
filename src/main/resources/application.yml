@@ -1,0 +1,17 @@
+spring.profiles.active: develop
+server:
+  port: 8090
+---
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  config:
+    activate:
+      on-profile: develop
+dictionary.file.path: ${DICTIONARY_FILE_PATH}
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+dictionary.file.path: ${DICTIONARY_FILE_PATH}
